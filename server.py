@@ -2,7 +2,7 @@ import socket
 from colorama import Fore, Back, Style
 sock = socket.socket()
 
-sock.bind(('', 25094))
+sock.bind(('', 12456))
 sock.listen(10000)
 
 while True:
