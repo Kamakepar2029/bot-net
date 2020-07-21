@@ -55,8 +55,8 @@ while True:
           sent = sent + 1
           port = port + 1
           print "Sent %s packet to %s throught port:%s"%(sent,ip,port)
-     if port == 65534:
-       port = 1
+          if port == 65534:
+             port = 1
      except:
        pass
        if not data:
