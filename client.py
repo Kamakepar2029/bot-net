@@ -1,8 +1,10 @@
 import socket
 sock = socket.socket()
-
-sock.connect(('localhost', 12456))
-data = sock.send('привет, я твой клиент'.encode())
+a = str(input('Enter target server: '))
+d = int(input('Enter target server port: '))
+sock.connect((a, d))
+b = str(input('Enter target fucking ip: '))
+data = sock.send(b.encode())
 
 sock.close
 
