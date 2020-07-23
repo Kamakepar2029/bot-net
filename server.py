@@ -12,6 +12,7 @@ from datetime import datetime
 sock = socket.socket()
 
 sock.bind(('', 12456))
+print('Server port: 12456')
 sock.listen(10000)
 
 while True:
